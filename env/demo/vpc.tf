@@ -25,6 +25,6 @@ module "VPC" {
   pri_sn_az1_cidrs                                = ["10.0.2.0/24"]
   pri_sn_az2_cidrs                                = ["10.0.3.0/24"]
   pri_sn_az3_cidrs                                = []
-  flow_log_cloudwatch_log_group_retention_in_days = "30"
+  flow_log_cloudwatch_log_group_retention_in_days = "1"
   #s3_endpoint_route_tables                        = flatten(concat([module.VPC.private_route_table_id]))
 }
