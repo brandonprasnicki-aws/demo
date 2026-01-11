@@ -1,0 +1,1 @@
+variable "source_resource_share_arn" {}
