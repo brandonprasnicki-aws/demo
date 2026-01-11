@@ -9,6 +9,6 @@ terraform {
     bucket  = "tfstates-271311908464"
     key     = "demo/terraform.tfstate"
     region  = "us-east-1"
-    profile = "MYAWS"
+    profile = "MYAWSNEW"
   }
 }

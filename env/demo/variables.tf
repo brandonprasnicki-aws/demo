@@ -18,17 +18,4 @@ variable "availability_zones" {
   default     = []
 }
 
-
-variable "on_prem_cidrs" {
-  type = list(string)
-}
-variable "domain_vpc_cidr" {}
-variable "prod_vpc_cidr" {}
-variable "int-qa_vpc_cidr" {}
-variable "dev_vpc_cidr" {}
 variable "vpc_cidr" {}
-variable "net_egress_vpc_cidr" {}
-variable "net_ingress_vpc_cidr" {}
-variable "shared_services_vpc_cidr" {}
-variable "helium_cidr" {}
-variable "shared_services_isolated_vpc_cidr" {}
