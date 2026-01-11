@@ -1,7 +1,7 @@
 /*
 #step 8
 module "VPNConnection" {
-  source = "../modules/VPNConnection"
+  source = "\.\./\.\./modules/VPNConnection"
   #common_tags = merge(var.common_tags, {"ams:rt:ams-monitoring-policy" = "ams-monitored"})
   common_tags            = var.common_tags
   target_name            = "onprem"
