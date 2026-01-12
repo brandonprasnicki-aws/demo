@@ -1,6 +1,6 @@
 
 module "VPC" {
-  source      = "../../modules/VPC"
+  source      = "../../modules/vpc"
   common_tags = var.common_tags
   tag_prefix  = var.common_tags["Project"]
 

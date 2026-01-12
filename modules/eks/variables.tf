@@ -65,7 +65,7 @@ variable "min_size" {
 variable "instance_types" {
   description = "List of instance types for the node group"
   type        = list(string)
-  default     = ["t3.small"]
+  default     = ["t3.micro"]
 }
 
 variable "ami_type" {
