@@ -9,7 +9,7 @@ resource "aws_eks_cluster" "this" {
   version  = var.k8s_version
 
   vpc_config {
-    subnet_ids = [var.subnet_ids]
+    subnet_ids = var.subnet_ids
   }
 
   # Ensure that IAM Role permissions are created before and deleted
