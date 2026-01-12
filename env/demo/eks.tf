@@ -5,4 +5,5 @@ module "eks_cluster" {
   access_entry_principal_arn = "arn:aws:iam::042776340228:user/brandonprasnicki@gmail.com"
   node_group_name = "my-node-group"
   ssh_key_name = "mysshkey"
+  version = "1.34"
 }
