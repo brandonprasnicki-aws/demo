@@ -47,13 +47,13 @@ variable "node_group_name" {
 variable "desired_size" {
   description = "Desired number of worker nodes"
   type        = number
-  default     = 1
+  default     = 2
 }
 
 variable "max_size" {
   description = "Maximum number of worker nodes"
   type        = number
-  default     = 2
+  default     = 3
 }
 
 variable "min_size" {
@@ -65,13 +65,13 @@ variable "min_size" {
 variable "instance_types" {
   description = "List of instance types for the node group"
   type        = list(string)
-  default     = ["t3.micro"]
+  default     = ["t3.small"]
 }
 
 variable "ami_type" {
   description = "AMI type for the node group"
   type        = string
-  default     = "AL2_x86_64"
+  default     = "AL2023_x86_64_STANDARD"
 }
 
 variable "disk_size" {

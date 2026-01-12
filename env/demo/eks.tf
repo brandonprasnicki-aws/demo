@@ -6,4 +6,5 @@ module "eks_cluster" {
   node_group_name = "my-node-group"
   ssh_key_name = "mysshkey"
   k8s_version = "1.34"
+  
 }
