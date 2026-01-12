@@ -38,3 +38,67 @@ variable "access_entry_type" {
 variable "access_entry_principal_arn" {
   type = string
 }
+
+variable "node_group_name" {
+  description = "Name of the EKS node group"
+  type        = string
+}
+
+variable "desired_size" {
+  description = "Desired number of worker nodes"
+  type        = number
+  default     = 1
+}
+
+variable "max_size" {
+  description = "Maximum number of worker nodes"
+  type        = number
+  default     = 2
+}
+
+variable "min_size" {
+  description = "Minimum number of worker nodes"
+  type        = number
+  default     = 1
+}
+
+variable "instance_types" {
+  description = "List of instance types for the node group"
+  type        = list(string)
+  default     = ["t3.medium"]
+}
+
+variable "ami_type" {
+  description = "AMI type for the node group"
+  type        = string
+  default     = "AL2_x86_64"
+}
+
+variable "disk_size" {
+  description = "Disk size in GiB for worker nodes"
+  type        = number
+  default     = 20
+}
+
+variable "capacity_type" {
+  description = "Capacity type for the node group"
+  type        = string
+  default     = "ON_DEMAND"
+}
+
+variable "ssh_key_name" {
+  description = "EC2 SSH key name for remote access"
+  type        = string
+}
+
+variable "source_security_group_ids" {
+  description = "List of security group IDs for remote access"
+  type        = list(string)
+  default     = []
+}
+
+variable "tags" {
+  description = "Tags to apply to the node group"
+  type        = map(string)
+  default     = {}
+}
