@@ -23,3 +23,18 @@ variable "access_config" {
     authentication_mode = "API"
   }
 }
+
+variable "kubernetes_groups" {
+  description = "List of Kubernetes groups for the access entry"
+  type        = list(string)
+  default     = ["group-1", "group-2"]
+}
+
+variable "access_entry_type" {
+  description = "Type of the access entry"
+  type        = string
+  default     = "STANDARD"
+}
+variable "access_entry_principal_arn" {
+  type = string
+}
