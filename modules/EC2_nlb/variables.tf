@@ -45,3 +45,9 @@ variable "enable_deletion_protection" {
   type        = bool
   default = true
 }
+variable "region" {
+  type = string
+}
+variable "aws_profile" {
+  type = string
+}
