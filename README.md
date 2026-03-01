@@ -1,22 +1,29 @@
 # demo mermaid test
 
+\```mermaid
 flowchart TD
-    %% VPC Layer
+    %% VPC
     VPC[VPC]
 
     %% Subnets
     SubnetA[Subnet A (Public)]
     SubnetB[Subnet B (Private)]
 
-    %% Resources
-    Lambda[Lambda Function]
-    S3[S3 Bucket]
-    APIGW[API Gateway]
+    %% Instances
+    Instance1[EC2 Instance 1]
+    Instance2[EC2 Instance 2]
+
+    %% Target Group / Load Balancer
+    TG[Target Group]
+    LB[Application Load Balancer]
 
     %% Connections
     VPC --> SubnetA
     VPC --> SubnetB
-    SubnetA --> APIGW
-    SubnetB --> Lambda
-    APIGW --> Lambda
-    Lambda --> S3
+    SubnetA --> LB
+    LB --> TG
+    TG --> Instance1
+    TG --> Instance2
+    SubnetB --> Instance1
+    SubnetB --> Instance2
+\```
