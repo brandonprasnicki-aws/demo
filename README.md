@@ -1,29 +1,18 @@
 # demo mermaid test
 
-\```mermaid
+
+```mermaid
 flowchart TD
-    %% VPC
     VPC[VPC]
-
-    %% Subnets
-    SubnetA[Subnet A (Public)]
-    SubnetB[Subnet B (Private)]
-
-    %% Instances
-    Instance1[EC2 Instance 1]
-    Instance2[EC2 Instance 2]
-
-    %% Target Group / Load Balancer
+    Subnets[Subnets]
+    LB[Load Balancer]
     TG[Target Group]
-    LB[Application Load Balancer]
+    EC2_1[EC2 Instance 1]
+    EC2_2[EC2 Instance 2]
 
-    %% Connections
-    VPC --> SubnetA
-    VPC --> SubnetB
-    SubnetA --> LB
+    VPC --> Subnets
+    Subnets --> LB
     LB --> TG
-    TG --> Instance1
-    TG --> Instance2
-    SubnetB --> Instance1
-    SubnetB --> Instance2
-\```
+    TG --> EC2_1
+    TG --> EC2_2
+```
